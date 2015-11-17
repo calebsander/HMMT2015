@@ -6,7 +6,7 @@ public class Theme2 {
 			for (j = 1; j < 2015; j++) {
 				for (k = 1; k < 2015; k++) {
 					for (l = 1; l < 2015; l++) {
-						eightSum = i + j + k + l + (i + k) + (j + l) + (i * j) + (k * l);
+						eightSum = i + j + k + l + (i * k) + (j * l) + (i * j) + (k * l);
 						if (eightSum == 2015) min = Math.min(min, i + j + k + l);
 						else if (eightSum > 2015) break;
 					}

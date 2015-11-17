@@ -10,7 +10,7 @@ public class Team10 {
 		for (int n = 2; n < 43; n++) {
 			possibleRemainders = new HashSet<Integer>();
 			for (int x = 0; x < MAX_TEST; x++) {
-				possibleRemainders.add(new BigInteger(Integer.toString(x)).pow(x).mod(new BigInteger(Integer.toString(n))).intValue());
+				possibleRemainders.add(BigInteger.valueOf(x).pow(x).mod(BigInteger.valueOf(n)).intValue());
 				if (possibleRemainders.size() == n) break;
 			}
 			if (possibleRemainders.size() != n) count++;

@@ -17,7 +17,7 @@ public class Team4 {
 				for (b = 0; b < s.size(); b++) {
 					for (c = 0; c < s.size(); c++) {
 						if (c == a || c == b) continue;
-						if (new BigInteger(s.get(a).toString()).pow(s.get(b)).equals(new BigInteger(s.get(c).toString()))) {
+						if (BigInteger.valueOf(s.get(a)).pow(s.get(b)).equals(BigInteger.valueOf(s.get(c)))) {
 							setIsGood = false;
 							break;
 						}
@@ -32,7 +32,7 @@ public class Team4 {
 					if (!setIsGood) break;
 					for (c = 0; c < t.size(); c++) {
 						if (c == a || c == b) continue;
-						if (new BigInteger(t.get(a).toString()).pow(t.get(b)).equals(new BigInteger(t.get(c).toString()))) {
+						if (BigInteger.valueOf(t.get(a)).pow(t.get(b)).equals(BigInteger.valueOf(t.get(c)))) {
 							setIsGood = false;
 							break;
 						}
